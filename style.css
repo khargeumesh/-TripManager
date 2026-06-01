@@ -1,0 +1,520 @@
+ /* =============================== */
+/* GLOBAL RESET */
+/* =============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =============================== */
+/* BODY */
+/* =============================== */
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background: #0d1733;
+    color: #ffffff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* =============================== */
+/* PAGE SYSTEM */
+/* =============================== */
+
+.page {
+    display: none;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.page.active {
+    display: block;
+}
+
+/* =============================== */
+/* CONTAINER */
+/* =============================== */
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    padding-top: 20px;
+}
+
+/* =============================== */
+/* LOGIN CARD */
+/* =============================== */
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    margin: 50px auto;
+    background: #2d3250;
+    border-radius: 25px;
+    padding: 30px 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+}
+
+/* =============================== */
+/* APP TITLE */
+/* =============================== */
+
+.app-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.app-subtitle {
+    text-align: center;
+    color: #cfd4ff;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+}
+
+/* =============================== */
+/* INPUT GROUP */
+/* =============================== */
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.input-group input {
+    width: 100%;
+    background: #424769;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 15px;
+}
+
+.input-group input::placeholder {
+    color: #c7c7c7;
+}
+
+/* =============================== */
+/* BUTTONS */
+/* =============================== */
+
+.primary-btn {
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    background: #f6b17a;
+    color: #1a1a1a;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    background: #424769;
+    color: white;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.danger-btn {
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    background: #ff6767;
+    color: white;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* =============================== */
+/* DASHBOARD */
+/* =============================== */
+
+.main-heading {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.welcome-text {
+    text-align: center;
+    margin-top: 10px;
+    color: #f6b17a;
+    font-weight: 600;
+}
+
+.developer-text {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #c7c7c7;
+    margin-bottom: 30px;
+}
+
+/* =============================== */
+/* MENU CARD */
+/* =============================== */
+
+.menu-card {
+    background: #2d3250;
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.menu-card:hover {
+    transform: translateY(-3px);
+}
+
+.menu-card h2 {
+    color: #f6b17a;
+    margin-bottom: 8px;
+}
+
+.menu-card p {
+    color: #d7d7d7;
+}
+
+/* =============================== */
+/* PAGE HEADER */
+/* =============================== */
+
+.page-header {
+    margin-bottom: 20px;
+}
+
+.page-header h2 {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.7rem;
+}
+
+/* =============================== */
+/* BACK BUTTON */
+/* =============================== */
+
+.back-btn {
+    background: #424769;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+/* =============================== */
+/* TABLE WRAPPER */
+/* =============================== */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+/* =============================== */
+/* TABLE */
+/* =============================== */
+
+table {
+      width: 100%;
+     
+    border-collapse: collapse;
+    background: #2d3250;
+} 
+
+table th {
+    background: #424769;
+    color: white;
+    padding: 14px;
+    text-align: center;
+    font-size: 14px;
+}
+
+table td {
+    padding: 10px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* =============================== */
+/* TABLE INPUT */
+/* =============================== */
+ 
+table input {
+    width: 100%;
+    padding: 8px;
+    font-size: 13px;
+    border-radius: 6px;
+    background: #424769;
+    color: white;
+}
+
+
+table input[type="number"] {
+    min-width: 100px;
+}
+
+/* =============================== */
+/* TOTAL BOX */
+/* =============================== */
+
+.total-box {
+    background: #2d3250;
+    border-radius: 15px;
+    padding: 18px;
+    margin-top: 20px;
+}
+
+.total-box h3 {
+    margin-bottom: 10px;
+    color: #f6b17a;
+}
+
+/* =============================== */
+/* BUTTON ROW */
+/* =============================== */
+
+.button-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.button-row button {
+    flex: 1;
+}
+
+/* =============================== */
+/* SMALL TEXT */
+/* =============================== */
+
+.small-text {
+    text-align: center;
+    color: #c7c7c7;
+    margin-bottom: 15px;
+}
+
+/* =============================== */
+/* SELECTED SECTION */
+/* =============================== */
+
+#selectedSection {
+    display: none;
+    margin-top: 30px;
+}
+
+#selectedSection h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* =============================== */
+/* TOAST MESSAGE */
+/* =============================== */
+
+#toast {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #f6b17a;
+    color: #1a1a1a;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 700;
+    z-index: 9999;
+    display: none;
+}
+
+/* =============================== */
+/* MOBILE RESPONSIVE */
+/* =============================== */
+
+@media (max-width: 768px) {
+
+    .app-title {
+        font-size: 1.7rem;
+    }
+
+    .main-heading {
+        font-size: 1.8rem;
+    }
+
+    .menu-card {
+        padding: 20px;
+    }
+
+    table {
+        min-width: 650px;
+    }
+
+    .button-row {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .login-card {
+        padding: 25px 18px;
+    }
+
+    .app-title {
+        font-size: 1.5rem;
+    }
+
+    .main-heading {
+        font-size: 1.5rem;
+    }
+
+    .page {
+        padding: 15px;
+    }
+
+    table {
+        min-width: 600px;
+    }
+
+}
+
+/* =============================== */
+/* SCROLLBAR */
+/* =============================== */
+
+::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #2d3250;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f6b17a;
+    border-radius: 20px;
+}
+
+th, td {
+    text-align: center;
+    padding: 10px 6px;
+    font-size: 13px;
+    white-space: normal;
+}
+th:nth-child(1), td:nth-child(1) { width: 20%; }
+th:nth-child(2), td:nth-child(2) { width: 35%; }
+th:nth-child(3), td:nth-child(3) { width: 22%; }
+th:nth-child(4), td:nth-child(4) { width: 23%; }
+
+th:nth-child(1), td:nth-child(1) {
+    width: 25%;
+}
+
+th:nth-child(2), td:nth-child(2) {
+    width: 35%;
+}
+
+th:nth-child(3), td:nth-child(3) {
+    width: 20%;
+}
+
+th:nth-child(4), td:nth-child(4) {
+    width: 20%;
+}
+ /* =============================== */
+/* LOGOUT MODAL */
+/* =============================== */
+
+.logout-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(6px);
+    z-index: 99999;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.logout-modal.show {
+    display: flex;
+}
+
+.logout-box {
+    width: 100%;
+    max-width: 380px;
+    background: #2d3250;
+    border-radius: 24px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+    animation: popupScale 0.25s ease;
+}
+
+.logout-box h2 {
+    color: #f6b17a;
+    margin-bottom: 12px;
+}
+
+.logout-box p {
+    color: #d7d7d7;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.logout-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.logout-buttons button {
+    flex: 1;
+}
+
+@keyframes popupScale {
+
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

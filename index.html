@@ -1,0 +1,442 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Trip Manager</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Toast Message -->
+    <div id="toast"></div>
+
+    <!-- ========================= -->
+    <!-- LOGIN PAGE -->
+    <!-- ========================= -->
+
+    <section id="loginPage" class="page active">
+
+        <div class="login-card">
+
+            <h1 class="app-title">
+                MY TRIP MANAGER
+            </h1>
+
+            <p class="app-subtitle">
+                Track Your Daily Trips Professionally
+            </p>
+
+            <form id="loginForm">
+
+                <div class="input-group">
+                    <label>Enter Your Full Name</label>
+                    <input type="text"
+                        id="username"
+                        placeholder="Full Name"
+                        required>
+                </div>
+
+                <div class="input-group">
+                    <label>Create Password</label>
+                    <input type="password"
+                        id="password"
+                        placeholder="Password"
+                        required>
+                </div>
+
+                <button type="submit" class="primary-btn">
+                    Login
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ========================= -->
+    <!-- DASHBOARD PAGE -->
+    <!-- ========================= -->
+
+    <section id="dashboardPage" class="page">
+
+        <div class="container">
+
+            <h1 class="main-heading">
+                MY TRIP MANAGER
+            </h1>
+
+            <p class="welcome-text">
+                Welcome <span id="displayUser"></span>
+            </p>
+
+            <p class="developer-text">
+                App Developed by Umesh Kharge
+            </p>
+
+            <!-- Today's Trip Card -->
+
+            <div class="menu-card"
+                id="openTodayTrip">
+
+                <h2>Today's Trip</h2>
+
+                <p id="todayDate"></p>
+
+            </div>
+
+            <!-- Trip List Card -->
+
+            <div class="menu-card"
+                id="openTripList">
+
+                <h2>Trip List</h2>
+
+                <p>List Of All Trips</p>
+
+            </div>
+
+            <!-- Logout Button -->
+
+            <button id="logoutBtn"
+                class="danger-btn">
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ========================= -->
+    <!-- TODAY TRIP PAGE -->
+    <!-- ========================= -->
+
+    <section id="todayTripPage"
+        class="page">
+
+        <div class="container">
+
+            <div class="page-header">
+
+                <button class="back-btn"
+                    id="backToDashboard1">
+
+                    ← Back
+
+                </button>
+
+                <h2>
+                    Today's Trip
+                </h2>
+
+            </div>
+
+            <!-- Trip Table -->
+
+            <div class="table-wrapper">
+
+                <table id="tripEntryTable">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Date</th>
+
+                            <th>Location</th>
+
+                            <th>Advance</th>
+
+                            <th>Balance</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="tripEntryBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <!-- Add Trip -->
+
+            <button id="addTripBtn"
+                class="secondary-btn">
+
+                + Add Trip
+
+            </button>
+
+            <!-- Totals -->
+
+            <div class="total-box">
+
+                <h3>
+                    Advance Total :
+                    <span id="advanceTotal">
+                        ₹0
+                    </span>
+                </h3>
+
+                <h3>
+                    Balance Total :
+                    <span id="balanceTotal">
+                        ₹0
+                    </span>
+                </h3>
+
+            </div>
+
+            <!-- Actions -->
+
+            <div class="button-row">
+
+                <button id="saveTripBtn"
+                    class="primary-btn">
+
+                    Save Trip
+
+                </button>
+
+                <button id="cancelTripBtn"
+                    class="danger-btn">
+
+                    Cancel Trip
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ========================= -->
+    <!-- TRIP LIST PAGE -->
+    <!-- ========================= -->
+
+    <section id="tripListPage"
+        class="page">
+
+        <div class="container">
+
+            <div class="page-header">
+
+                <button class="back-btn"
+                    id="backToDashboard2">
+
+                    ← Back
+
+                </button>
+
+                <h2>
+                    Trip List
+                </h2>
+
+            </div>
+
+            <p class="small-text">
+                List Of All Trips
+            </p>
+
+            <!-- Saved Trip Table -->
+
+            <div class="table-wrapper">
+
+                <table id="savedTripTable">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Select</th>
+
+                            <th>Date</th>
+
+                            <th>Location</th>
+
+                            <th>Advance</th>
+
+                            <th>Balance</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="savedTripBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <!-- Grand Total -->
+
+            <div class="total-box">
+
+                <h3>
+                    Total Advance :
+                    <span id="grandAdvance">
+                        ₹0
+                    </span>
+                </h3>
+
+                <h3>
+                    Total Balance :
+                    <span id="grandBalance">
+                        ₹0
+                    </span>
+                </h3>
+
+            </div>
+
+            <!-- Actions -->
+
+            <div class="button-row">
+
+                <button id="customTotalBtn"
+                    class="primary-btn">
+
+                    Custom Total
+
+                </button>
+
+                <button id="deleteSelectedBtn"
+                    class="danger-btn">
+
+                    Cancel Trip
+
+                </button>
+
+            </div>
+
+            <!-- Selected Trip Result -->
+
+            <div id="selectedSection">
+
+                <h2>
+                    Selected Trips
+                </h2>
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Date</th>
+
+                                <th>Location</th>
+
+                                <th>Advance</th>
+
+                                <th>Balance</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="selectedTripBody">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <div class="total-box">
+
+                    <h3>
+                        Selected Advance :
+                        <span id="selectedAdvance">
+                            ₹0
+                        </span>
+                    </h3>
+
+                    <h3>
+                        Selected Balance :
+                        <span id="selectedBalance">
+                            ₹0
+                        </span>
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+      
+
+    </div>
+
+</div>
+<!-- LOGOUT CONFIRMATION MODAL -->
+
+<div id="logoutModal" class="logout-modal">
+
+    <div class="logout-box">
+
+        <h2>Logout</h2>
+
+        <p>
+            Are you sure you want to logout from
+            My Trip Manager?
+        </p>
+
+        <div class="logout-buttons">
+
+            <button id="cancelLogoutBtn"
+                class="secondary-btn">
+
+                Cancel
+
+            </button>
+
+            <button id="confirmLogoutBtn"
+                class="danger-btn">
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+    <!-- JavaScript -->
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
